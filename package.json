@@ -1,8 +1,8 @@
 {
   "name": "dom-node-size-label",
   "private": true,
-  "version": "0.0.1",
-  "description": "You can check dom node size in browser",
+  "version": "0.0.0",
+  "description": "Check dom node size in browser",
   "scripts": {
     "start": "npm run dev:chrome",
     "build": "npm run build:chrome",

@@ -1,12 +1,26 @@
-// Enable chromereload by uncommenting this line:
-// import 'chromereload/devonly'
+chrome.browserAction.setBadgeBackgroundColor({
+  color: `#34a852`
+});
 
-// chrome.runtime.onInstalled.addListener((details) => {
-//   console.log('previousVersion', details.previousVersion);
-// });
+let enableFlag:boolean = false;
 
-// chrome.tabs.onUpdated.addListener((tabId) => {
-//   chrome.pageAction.show(tabId);
-// });
-
-// console.log(`'Allo 'Allo! Event Page for Page Action`);
+chrome.browserAction.onClicked.addListener(function(tab){
+  if(tab.id !== undefined) {
+    if(enableFlag === false) {
+      enableFlag = true;
+      chrome.tabs.sendMessage(tab.id, "enable");
+      chrome.browserAction.setBadgeText({
+        text: `ON`
+      });
+      return;
+    }
+    if(enableFlag === true) {
+      enableFlag = false;
+      chrome.tabs.sendMessage(tab.id, "disable");
+      chrome.browserAction.setBadgeText({
+        text: ``
+      });
+      return;
+    }
+  }
+});

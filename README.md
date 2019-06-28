@@ -1,6 +1,6 @@
 # dom-node-size-label
 
-You can check dom node size in browser
+Check dom node size in browser
 
 ## Installation
 
