@@ -22,7 +22,7 @@ $ build:chrome
 
 `packages/dom-node-size-label-x.x.x-chrome` was born 👶
 
-Attension ⚠️  
+## Attension ⚠️
 This extension has not been published.  
 If you use this extension, please enable `Developer mode`  
 https://developer.chrome.com/extensions/faq#faq-dev-01
